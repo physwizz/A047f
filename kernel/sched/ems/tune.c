@@ -2657,7 +2657,7 @@ store_aio_tuner(struct kobject *k, struct kobj_attribute *attr,
 	_arg = arg0;
 	ptr = strsep(&_arg, ",");
 	i = 0;
-	while (ptr != NULL) {
+	while (ptr != NULL && (i < NUM_OF_KEY)) {
 		ret = kstrtol(ptr, 10, &v);
 		if (ret)
 			return ret;
