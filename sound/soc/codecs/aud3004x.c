@@ -561,7 +561,7 @@ static const unsigned int aud3004x_dvol_adc_tlv[] = {
  */
 static const unsigned int aud3004x_dvol_dmic_tlv[] = {
 	TLV_DB_RANGE_HEAD(1),
-	0x00, 0x07, TLV_DB_SCALE_ITEM(1, 2, 0),
+	0x00, 0x07, TLV_DB_SCALE_ITEM(3, 2, 0),
 };
 static int dmic_bias_get(struct snd_kcontrol *kcontrol,
 		struct snd_ctl_elem_value *ucontrol)
