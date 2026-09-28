@@ -549,8 +549,8 @@ bool write_to_hw(struct device *dev, unsigned int reg, int map_type)
  */
 static const unsigned int aud3004x_dvol_adc_tlv[] = {
 	TLV_DB_RANGE_HEAD(2),
-	0x00, 0x05, TLV_DB_SCALE_ITEM(-8000, 200, 0),
-	0x06, 0xE5, TLV_DB_SCALE_ITEM(-6950, 50, 0),
+	0x00, 0x05, TLV_DB_SCALE_ITEM(-6000, 200, 0),
+	0x06, 0xE5, TLV_DB_SCALE_ITEM(-4950, 65, 0),
 };
 
 /*
@@ -561,7 +561,7 @@ static const unsigned int aud3004x_dvol_adc_tlv[] = {
  */
 static const unsigned int aud3004x_dvol_dmic_tlv[] = {
 	TLV_DB_RANGE_HEAD(1),
-	0x00, 0x07, TLV_DB_SCALE_ITEM(3, 2, 0),
+	0x00, 0x07, TLV_DB_SCALE_ITEM(3, 3, 0),
 };
 static int dmic_bias_get(struct snd_kcontrol *kcontrol,
 		struct snd_ctl_elem_value *ucontrol)
@@ -1085,10 +1085,10 @@ static SOC_ENUM_SINGLE_DECL(aud3004x_adc_dat_enum3, AUD3004X_23_IF_FORM4,
  */
 static const unsigned int aud3004x_dvol_dac_tlv[] = {
 	TLV_DB_RANGE_HEAD(4),
-	0x01, 0x03, TLV_DB_SCALE_ITEM(-9630, 600, 0),
-	0x04, 0x04, TLV_DB_SCALE_ITEM(-8240, 0, 0),
-	0x05, 0x09, TLV_DB_SCALE_ITEM(-8000, 200, 0),
-	0x0A, 0xE9, TLV_DB_SCALE_ITEM(-7000, 50, 0),
+	0x01, 0x03, TLV_DB_SCALE_ITEM(-7630, 600, 0),
+	0x04, 0x04, TLV_DB_SCALE_ITEM(-6240, 0, 0),
+	0x05, 0x09, TLV_DB_SCALE_ITEM(-6000, 200, 0),
+	0x0A, 0xE9, TLV_DB_SCALE_ITEM(-5000, 65, 0),
 };
 
 /*
